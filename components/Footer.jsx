@@ -1,13 +1,13 @@
 "use client";
 import React from 'react';
 import Link from 'next/link';
-// Lucide icons for contact info
+
 import { Phone, Mail, MapPin } from 'lucide-react'; 
-// React Icons for Social Media
+
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
-  // Social icons array
+  
   const socialLinks = [
     { Icon: FaFacebookF, href: "#" },
     { Icon: FaInstagram, href: "#" },
@@ -74,7 +74,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <p className="text-xs text-gray-400 uppercase font-bold">Visit office:</p>
-                  <p className="text-sm leading-relaxed">Sf-6 hill view Arcade, 5 Davis Road, Shimla Hill, Lahore</p>
+                  <p className="text-sm leading-relaxed"> Lahore</p>
                 </div>
               </div>
             </div>

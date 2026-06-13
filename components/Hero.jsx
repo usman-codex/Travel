@@ -1,4 +1,3 @@
-
 "use client";
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -26,7 +25,7 @@ const slides = [
     title: "Uzbekistan Tour 8 Days 7 Nights",
     desc: "Explore Tashkent, Samarkand & Bukhara with exclusive flight + hotel packages!",
     btnText: "Let's Get Started",
-    titleColor: "text-red-600" 
+    titleColor: "text-white" 
   },
   {
     id: 4,
@@ -41,7 +40,6 @@ const slides = [
 const HeroSlider = () => {
   const [current, setCurrent] = useState(0);
 
-  // Auto-slide logic
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
@@ -50,7 +48,7 @@ const HeroSlider = () => {
   }, []);
 
   return (
-    <section className="relative h-screen w-full overflow-hidden bg-black">
+    <section className="relative h-screen w-full overflow-hidden bg-[#003366]">
       <AnimatePresence mode="wait">
         <motion.div
           key={current}
@@ -65,19 +63,18 @@ const HeroSlider = () => {
               backgroundImage: `url(${slides[current].image})`,
             }}
           >
-           
-            <div className="absolute inset-0 bg-black/50"></div>
+          
+            <div className="absolute inset-0 bg-[#001a33]/60"></div>
           </motion.div>
 
           <div className="relative z-10 h-full container mx-auto px-6 md:px-16 flex items-center">
             <div className="max-w-2xl text-left">
               
-             
               <motion.h1 
                 initial={{ opacity: 0, x: -150 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.9, ease: "easeOut" }}
-                className={`text-4xl md:text-7xl font-extrabold leading-tight mb-6 drop-shadow-2xl ${slides[current].titleColor}`}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className={`text-4xl md:text-7xl font-black leading-tight mb-6 drop-shadow-2xl ${slides[current].titleColor}`}
               >
                 {slides[current].title}
               </motion.h1>
@@ -85,19 +82,19 @@ const HeroSlider = () => {
               <motion.p
                 initial={{ opacity: 0, x: -100 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.9, delay: 0.3 }}
-                className="text-lg md:text-2xl text-white mb-10 leading-relaxed font-medium drop-shadow-lg"
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="text-lg md:text-2xl text-gray-100 mb-10 leading-relaxed font-medium drop-shadow-lg"
               >
                 {slides[current].desc}
               </motion.p>
 
-            
               <motion.div
                 initial={{ opacity: 0, x: -80 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.7, delay: 0.6 }}
               >
-                <button className="bg-[#0b33ad] text-white px-10 py-4 rounded font-bold text-xl hover:bg-red-600 transition-all duration-300 shadow-2xl active:scale-95">
+                
+                <button className="bg-[#D4AF37] text-[#003366] px-12 py-4 rounded-md font-black text-xl hover:bg-[#FFD700] hover:scale-105 transition-all duration-300 shadow-[0_10px_20px_rgba(0,0,0,0.3)] active:scale-95">
                   {slides[current].btnText}
                 </button>
               </motion.div>
@@ -106,14 +103,14 @@ const HeroSlider = () => {
         </motion.div>
       </AnimatePresence>
 
-      
+     
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex gap-3">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrent(index)}
             className={`h-2.5 transition-all duration-500 rounded-full ${
-              current === index ? "w-10 bg-white" : "w-2.5 bg-white/40"
+              current === index ? "w-12 bg-[#D4AF37] shadow-[0_0_15px_#D4AF37]" : "w-2.5 bg-white/40"
             }`}
           />
         ))}
