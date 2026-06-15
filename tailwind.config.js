@@ -1,13 +1,16 @@
 // tailwind.config.js
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
     extend: {
       colors: {
-       
-        primaryBlue: "#003366",   
-        brandGold: "#D4AF37",   
-        brandYellow: "#FFD700",  
+        primaryBlue: "#003366",  
+        brandOrange: "#D58267",  
         softGray: "#F4F4F4",
       },
     },
