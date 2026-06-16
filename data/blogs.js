@@ -36,7 +36,7 @@ export const blogsData = [
     date: "28 JUN",
     category: "Umrah",
     author: "Travel Air",
-    image: "/images/tour1.jpg",
+    image: "/images/umrah.jpg",
     excerpt: "Starting on the spiritual journey of Umrah is a significant milestone for many Muslims.",
     content: "Lahore provides excellent connectivity for pilgrims with direct flights to Jeddah and Madinah. Our packages include premium lounge access..."
   }
