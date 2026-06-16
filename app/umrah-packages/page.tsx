@@ -4,7 +4,7 @@ import UmrahHero from '@/components/UmrahHero';
 import UmrahPackages from '@/components/UmrahPackages'; 
 import UmrahFaq from '@/components/UmrahFaq';
 import { CheckCircle2, MapPin, Info, Star, Bookmark } from 'lucide-react';
-import Footer from '@/components/Footer';
+
 
 export default function UmrahPage() {
   return (
@@ -110,7 +110,7 @@ export default function UmrahPage() {
 
      
       <UmrahFaq />
-      <Footer />
+     
     </main>
   );
 }

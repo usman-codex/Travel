@@ -3,7 +3,7 @@ import React from 'react';
 import ToursHero from '@/components/ToursHero';
 import ToursListing from '@/components/ToursListing';
 import WhyChooseUs from '@/components/WhyChooseUs';
-import Footer from '@/components/Footer';
+
 
 export default function ToursPage() {
   return (
@@ -26,7 +26,7 @@ export default function ToursPage() {
       </section>
       <ToursListing />
       <WhyChooseUs />
-      <Footer />
+     
     </main>
   );
 }

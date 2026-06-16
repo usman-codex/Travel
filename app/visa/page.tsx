@@ -4,7 +4,7 @@ import VisaHero from '@/components/VisaHero';
 import VisaCountryCards from '@/components/VisaCountryCards';
 import CountryGrid from '@/components/CountryGrid';
 import VisaProcess from '@/components/VisaProcess';
-import Footer from '@/components/Footer';
+
 
 import { ArrowRight } from 'lucide-react';
 
@@ -47,7 +47,6 @@ export default function VisaPage() {
         </div>
       </section>
 
-       <Footer />
     </main>
   );
 }
