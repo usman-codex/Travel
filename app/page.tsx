@@ -6,7 +6,7 @@ import UmrahPackages from "@/components/UmrahPackages";
 import VisaConsultancy from "@/components/VisaConsultancy";
 import CustomerHelp from "@/components/CustomerHelp";
 import PartnersMarquee from "@/components/PartnersMarquee";
-import Footer from "@/components/Footer";
+
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
       <VisaConsultancy />
       <CustomerHelp />
       <PartnersMarquee />
-      <Footer />
+      
     </main>
   );
 }

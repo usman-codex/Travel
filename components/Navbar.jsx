@@ -7,7 +7,7 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'Tours', href: '/tours' },
-    { name: 'Hajj', href: '/hajj' },
+   
     { name: 'Umrah Packages', href: '/umrah-packages' },
     { name: 'Visa', href: '/visa' },
     { name: 'Destination', href: '/destination' },
