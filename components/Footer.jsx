@@ -21,7 +21,7 @@ const Footer = () => {
           <div className="col-span-2 lg:col-span-1 flex flex-col gap-6">
             <div className="bg-white p-3 rounded-2xl w-fit shadow-xl">
               <h1 className="text-lg lg:text-xl font-black text-[#003366] tracking-tighter uppercase">
-                TRAVEL<span className="text-[#D58267]">OPERATIONS</span>
+                TRAVEL<span className="text-[#D58267]"> OPERATIONS</span>
               </h1>
             </div>
             <p className="text-gray-300 leading-relaxed text-xs lg:text-base font-medium lg:pr-6">
