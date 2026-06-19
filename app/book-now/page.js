@@ -64,7 +64,7 @@ export default function BookNow() {
                 value={formData.tourPackage} 
                 onChange={handleChange}
                 required
-                className="w-full bg-transparent text-lg md:text-2xl font-black text-gray-900 outline-none cursor-pointer appearance-none pr-10"
+                className="w-full bg-transparent text-lg md:text-2xl font-black text-gray-800 outline-none cursor-pointer appearance-none pr-10"
                 >
                 <option value="" disabled className="text-gray-900 font-bold bg-white">--- SELECT A PACKAGE ---</option>
                 <optgroup label="Umrah Packages" className="font-bold bg-white">
@@ -90,42 +90,54 @@ export default function BookNow() {
 
           <div className="flex flex-col">
             <label className="text-[#003366] font-black mb-1.5 text-xs md:text-sm uppercase ml-1">Full Name *</label>
-            <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} required placeholder="Enter your full name" className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:border-[#D58267] focus:bg-white outline-none transition-all font-bold placeholder:text-gray-600 placeholder:opacity-100" />
+            <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} required placeholder="Enter your full name" className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:border-[#D58267] focus:bg-white outline-none transition-all font-bold placeholder:text-gray-400" />
           </div>
 
           <div className="flex flex-col">
             <label className="text-[#003366] font-black mb-1.5 text-xs md:text-sm uppercase ml-1">Email Address *</label>
-            <input type="email" name="email" value={formData.email} onChange={handleChange} required placeholder="email@example.com" className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:border-[#D58267] focus:bg-white outline-none transition-all font-bold placeholder:text-gray-600 placeholder:opacity-100" />
+            <input type="email" name="email" value={formData.email} onChange={handleChange} required placeholder="email@example.com" className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:border-[#D58267] focus:bg-white outline-none transition-all font-bold placeholder:text-gray-400" />
           </div>
 
           <div className="flex flex-col">
             <label className="text-[#003366] font-black mb-1.5 text-xs md:text-sm uppercase ml-1">Phone Number *</label>
-            <input type="text" name="phone" value={formData.phone} onChange={handleChange} required placeholder="03xx xxxxxxx" className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:border-[#D58267] focus:bg-white outline-none transition-all font-bold placeholder:text-gray-600 placeholder:opacity-100" />
+            <input type="text" name="phone" value={formData.phone} onChange={handleChange} required placeholder="03xx xxxxxxx" className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:border-[#D58267] focus:bg-white outline-none transition-all font-bold placeholder:text-gray-400" />
           </div>
 
           <div className="flex flex-col">
             <label className="text-[#003366] font-black mb-1.5 text-xs md:text-sm uppercase ml-1">CNIC / Passport *</label>
-            <input type="text" name="cnic" value={formData.cnic} onChange={handleChange} required placeholder="Identity Number" className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:border-[#D58267] focus:bg-white outline-none transition-all font-bold placeholder:text-gray-600 placeholder:opacity-100" />
+            <input type="text" name="cnic" value={formData.cnic} onChange={handleChange} required placeholder="Identity Number" className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:border-[#D58267] focus:bg-white outline-none transition-all font-bold placeholder:text-gray-400" />
           </div>
 
           <div className="flex flex-col">
             <label className="text-[#003366] font-black mb-1.5 text-xs md:text-sm uppercase ml-1">Departure City *</label>
-            <input type="text" name="departureCity" value={formData.departureCity} onChange={handleChange} required placeholder="e.g. Lahore, Karachi" className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:border-[#D58267] focus:bg-white outline-none transition-all font-bold placeholder:text-gray-600 placeholder:opacity-100" />
+            <input type="text" name="departureCity" value={formData.departureCity} onChange={handleChange} required placeholder="e.g. Lahore, Karachi" className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:border-[#D58267] focus:bg-white outline-none transition-all font-bold placeholder:text-gray-400" />
           </div>
 
           <div className="flex flex-col">
             <label className="text-[#003366] font-black mb-1.5 text-xs md:text-sm uppercase ml-1">Travel Date *</label>
-            <input type="date" name="travelDate" value={formData.travelDate} onChange={handleChange} required className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:border-[#D58267] focus:bg-white outline-none transition-all font-bold text-gray-900 appearance-none" />
+            <div className="relative">
+                <input 
+                  type={formData.travelDate ? "date" : "text"}
+                  name="travelDate" 
+                  value={formData.travelDate} 
+                  onFocus={(e) => (e.target.type = "date")}
+                  onBlur={(e) => { if (!e.target.value) e.target.type = "text" }}
+                  onChange={handleChange} 
+                  required 
+                  placeholder="Select Travel Date"
+                  className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:border-[#D58267] focus:bg-white outline-none transition-all font-bold text-gray-700 placeholder:text-gray-400" 
+                />
+            </div>
           </div>
 
           <div className="flex flex-col">
             <label className="text-[#003366] font-black mb-1.5 text-xs md:text-sm uppercase ml-1">Number of Travelers *</label>
-            <input type="number" name="numTravelers" placeholder="How many people?" value={formData.numTravelers} onChange={handleChange} required className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:border-[#D58267] focus:bg-white outline-none transition-all font-bold placeholder:text-gray-600 placeholder:opacity-100" />
+            <input type="number" name="numTravelers" placeholder="How many people?" value={formData.numTravelers} onChange={handleChange} required className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:border-[#D58267] focus:bg-white outline-none transition-all font-bold placeholder:text-gray-400" />
           </div>
 
           <div className="md:col-span-2 mt-2">
             <label className="text-[#003366] font-black mb-1.5 text-xs md:text-sm uppercase ml-1">Additional Notes</label>
-            <textarea name="additionalNotes" rows={4} value={formData.additionalNotes} onChange={handleChange} placeholder="Any special requirements or messages..." className="w-full p-5 border-2 border-gray-100 rounded-[1.5rem] md:rounded-[2rem] bg-gray-50 focus:border-[#D58267] focus:bg-white outline-none transition-all font-bold placeholder:text-gray-600 placeholder:opacity-100"></textarea>
+            <textarea name="additionalNotes" rows={4} value={formData.additionalNotes} onChange={handleChange} placeholder="Any special requirements or messages..." className="w-full p-5 border-2 border-gray-100 rounded-[1.5rem] md:rounded-[2rem] bg-gray-50 focus:border-[#D58267] focus:bg-white outline-none transition-all font-bold placeholder:text-gray-400"></textarea>
           </div>
 
           <div className="md:col-span-2 pt-4">
