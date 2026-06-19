@@ -66,7 +66,7 @@ const Footer = () => {
                 </div>
                 <div className="flex flex-col">
                   <span className="hidden lg:block text-[10px] text-[#D58267] font-black uppercase tracking-widest mb-1">Call Us</span>
-                  <span className="text-[10px] lg:text-xl font-bold tracking-wide">0321 9886680</span>
+                  <span className="text-[10px] lg:text-xl font-bold tracking-wide">030 00000000</span>
                 </div>
               </div>
 
