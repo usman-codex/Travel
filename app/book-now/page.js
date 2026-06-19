@@ -74,11 +74,7 @@ export default function BookNow() {
                     <option value="Standard Umrah Package">Standard Umrah Package</option>
                     <option value="Premium Umrah Package">Premium Umrah Package</option>
                 </optgroup>
-                <optgroup label="Hajj Packages">
-                    <option value="Silver Hajj Package">Silver Hajj Package</option>
-                    <option value="Golden Hajj Package">Golden Hajj Package</option>
-                    <option value="Platinum Hajj Package">Platinum Hajj Package</option>
-                </optgroup>
+                
                 <optgroup label="International Tours">
                     <option value="Thailand Tour">Thailand Tour</option>
                     <option value="Malaysia Special">Malaysia Special</option>
