@@ -120,7 +120,7 @@ export default function BookNow() {
 
           <div className="flex flex-col">
             <label className="text-[#003366] font-black mb-1.5 text-xs md:text-sm uppercase ml-1">Number of Travelers *</label>
-            <input type="number" name="numTravelers" min="1" value={formData.numTravelers} onChange={handleChange} required className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:border-[#D58267] focus:bg-white placeholder:text-gray-400 placeholder:font-medium outline-none transition-all font-bold" />
+            <input type="number" name="numTravelers"  value={formData.numTravelers} onChange={handleChange} required className="w-full p-4 border-2 border-gray-100 rounded-2xl bg-gray-50 focus:border-[#D58267] focus:bg-white placeholder:text-gray-400 placeholder:font-medium outline-none transition-all font-bold" />
           </div>
 
           <div className="md:col-span-2 mt-2">
