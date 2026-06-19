@@ -54,7 +54,7 @@ export default function BookNow() {
         </h1>
         <p className="text-center text-gray-600 mb-8 md:mb-12 text-sm md:text-lg font-bold">Please fill in the details below to confirm your booking.</p>
         
-        <form onSubmit={handleSubmit} className="bg-white p-5 md:p-12 rounded-[2rem] md:rounded-[2.5rem] shadow-2xl grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5 md:gap-y-6 border-t-[10px] md:border-t-[12px] border-[#e31e24]">
+        <form onSubmit={handleSubmit} className="bg-white p-5 md:p-12 rounded-[2rem] md:rounded-[2.5rem] shadow-2xl grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5 md:gap-y-6 border-t-[10px] md:border-t-[12px] border-[#D58267]">
           
           <div className="md:col-span-2 bg-red-50 p-4 md:p-6 rounded-2xl border border-red-100 mb-2 md:mb-4 relative">
             <label className="block text-red-800 font-black mb-2 text-[10px] md:text-xs uppercase tracking-widest">Select Your Package</label>
@@ -141,7 +141,7 @@ export default function BookNow() {
           </div>
 
           <div className="md:col-span-2 pt-4">
-            <button type="submit" className="bg-[#e31e24] text-white px-8 md:px-12 py-4 md:py-5 rounded-xl md:rounded-2xl font-black text-lg md:text-2xl hover:bg-black transition-all shadow-xl w-full active:scale-95 uppercase tracking-widest">
+            <button type="submit" className="bg-[#D58267] text-white px-8 md:px-12 py-4 md:py-5 rounded-xl md:rounded-2xl font-black text-lg md:text-2xl hover:bg-black transition-all shadow-xl w-full active:scale-95 uppercase tracking-widest">
               CONFIRM BOOKING
             </button>
           </div>
