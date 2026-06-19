@@ -25,7 +25,7 @@ const Navbar = () => {
       <nav className="fixed w-full bg-white shadow-sm z-50 border-b border-gray-100"> 
         <div className="max-w-[1400px] mx-auto px-6 flex items-center justify-between h-20">
           
-          {/* 1. Logo - Size reduced for better look */}
+         
           <div className="shrink-0">
             <Link href="/">
               <img 
@@ -36,7 +36,7 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* 2. Desktop Nav Links */}
+        
           <ul className="hidden lg:flex items-center space-x-8">
             {navLinks.map((link) => (
               <li key={link.name} className="relative group">
@@ -51,9 +51,9 @@ const Navbar = () => {
             ))}
           </ul>
 
-          {/* 3. Right Side: Desktop Button + Mobile Toggle */}
+         
           <div className="flex items-center gap-4">
-            {/* Desktop WhatsApp Button */}
+           
             <button 
               onClick={handleWhatsApp}
               className="hidden md:flex bg-[#D58267] text-white px-5 py-2.5 rounded-full items-center gap-2 font-bold text-sm hover:bg-[#003366] transition-all shadow-md active:scale-95"
@@ -62,7 +62,7 @@ const Navbar = () => {
               0300 7800017
             </button>
 
-            {/* Mobile Menu Button */}
+           
             <button 
               onClick={() => setIsOpen(true)}
               className="lg:hidden p-2 text-[#003366] hover:bg-gray-100 rounded-lg transition-colors"
@@ -73,11 +73,11 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* 4. Mobile Sidebar (Side Drawer) */}
+      
       <AnimatePresence>
         {isOpen && (
           <>
-            {/* Background Overlay */}
+            
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -86,7 +86,7 @@ const Navbar = () => {
               className="fixed inset-0 bg-black/60 z-[60] backdrop-blur-sm lg:hidden"
             />
 
-            {/* Sidebar Menu */}
+          
             <motion.div 
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
@@ -94,7 +94,7 @@ const Navbar = () => {
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
               className="fixed top-0 right-0 h-screen w-[280px] bg-white z-[70] shadow-2xl lg:hidden flex flex-col"
             >
-              {/* Header inside Sidebar */}
+             
               <div className="flex items-center justify-between p-6 border-b border-gray-100">
                 <span className="font-black text-[#003366] text-xl">MENU</span>
                 <button 
@@ -105,7 +105,7 @@ const Navbar = () => {
                 </button>
               </div>
 
-              {/* Links List */}
+             
               <div className="flex flex-col p-6 space-y-4 overflow-y-auto">
                 {navLinks.map((link) => (
                   <Link 
@@ -119,7 +119,7 @@ const Navbar = () => {
                 ))}
               </div>
 
-              {/* Mobile Contact Footer */}
+             
               <div className="mt-auto p-6 bg-gray-50">
                 <button 
                   onClick={handleWhatsApp}

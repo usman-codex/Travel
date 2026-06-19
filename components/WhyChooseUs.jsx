@@ -1,4 +1,4 @@
-// components/WhyChooseUs.jsx
+
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -17,7 +17,7 @@ const WhyChooseUs = () => {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-6">
         
-        {/* Top Text Box */}
+      
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -29,7 +29,7 @@ const WhyChooseUs = () => {
           </p>
         </motion.div>
 
-        {/* Main Title */}
+       
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-black text-[#003366] uppercase tracking-tighter">
             Why Travel Operations.pk?
@@ -37,7 +37,7 @@ const WhyChooseUs = () => {
           <div className="w-24 h-1.5 bg-[#D4AF37] mx-auto mt-4 rounded-full"></div>
         </div>
 
-        {/* Features Icons Grid */}
+        
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-16">
           {features.map((item, index) => (
             <motion.div 
@@ -57,7 +57,7 @@ const WhyChooseUs = () => {
           ))}
         </div>
 
-        {/* Bottom Text Box */}
+      
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

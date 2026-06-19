@@ -3,14 +3,18 @@
 import React from 'react';
 
 const partners = [
-  "/images/marq-1.png", 
-  "/images/marq-2.png", 
-  "/images/marq-3.png", 
-  "/images/marq-4.png", 
-  "/images/marq-5.png", 
-  "/images/marq-6.png", 
-  "/images/marq-7.png", 
-  "/images/marq-8.png"
+  "/images/pia.png", 
+  "/images/centrumair.png", 
+  "/images/emirates.png", 
+  "/images/iraq-airline.png", 
+  "/images/malaysia.png", 
+  "/images/qatar.png", 
+  "/images/saudi.png", 
+  "/images/uzbekistan.png", 
+  "/images/air kazakhstan.png", 
+  "/images/kyrgyzstan.png", 
+  "/images/tajik.png", 
+  "/images/turkish.png"
 ];
 
 const PartnersMarquee = () => {
