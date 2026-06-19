@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Phone, Menu, X } from 'lucide-react';
+import { Menu, X, CalendarCheck } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
@@ -15,10 +15,6 @@ const Navbar = () => {
     { name: 'Destination', href: '/destination' },
     { name: 'Blog', href: '/blog' },
   ];
-
-  const handleWhatsApp = () => {
-    window.open("https://wa.me/923007800017", "_blank"); 
-  };
 
   return (
     <>
@@ -49,13 +45,13 @@ const Navbar = () => {
           </ul>
 
           <div className="flex items-center gap-4">
-            <button 
-              onClick={handleWhatsApp}
-              className="hidden md:flex bg-[#D58267] text-white px-5 py-2.5 rounded-full items-center gap-2 font-bold text-sm hover:bg-[#003366] transition-all shadow-md active:scale-95"
-            > 
-              <Phone size={18} fill="white" />
-              0300 7800017
-            </button>
+           
+            <Link href="/book-now" className="hidden md:flex">
+              <button className="bg-[#D58267] text-white px-6 py-2.5 rounded-full flex items-center gap-2 font-black text-sm hover:bg-[#003366] transition-all shadow-md active:scale-95 uppercase tracking-widest"> 
+                <CalendarCheck size={18} />
+                Book Now
+              </button>
+            </Link>
 
             <button 
               onClick={() => setIsOpen(true)}
@@ -111,13 +107,12 @@ const Navbar = () => {
               </div>
 
               <div className="p-6 border-t border-gray-100 bg-gray-50">
-                <button 
-                  onClick={handleWhatsApp}
-                  className="w-full bg-[#D58267] text-white py-4 rounded-xl flex items-center justify-center gap-3 font-black text-lg shadow-lg active:scale-95"
-                >
-                  <Phone size={22} fill="white" />
-                  0300 7800017
-                </button>
+                <Link href="/book-now" onClick={() => setIsOpen(false)}>
+                  <button className="w-full bg-[#D58267] text-white py-4 rounded-xl flex items-center justify-center gap-3 font-black text-lg shadow-lg active:scale-95 uppercase">
+                    <CalendarCheck size={22} />
+                    Book Now
+                  </button>
+                </Link>
                 <div className="mt-4 text-center">
                    <p className="text-[10px] text-gray-400 font-black uppercase tracking-[0.2em]">Travel Operations.pk</p>
                 </div>
