@@ -14,7 +14,7 @@ const slides = [
   {
     id: 2,
     image: "/images/hajj.jpg", 
-    title: "Hajj Packages 2025",
+    title: "Umrah Packages 2025",
     desc: "In 2025, go on the journey of a lifetime with Travel Operations, your dependable travel companion for a really remarkable Haj.",
     btnText: "Let's Get Started",
     titleColor: "text-white"
